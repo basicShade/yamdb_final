@@ -8,10 +8,12 @@ class AdminOnly(permissions.BasePermission):
     def has_permission(self, request, view):
         if isinstance(request.user, User):
             return request.user.is_admin
+        return
 
     def has_object_permission(self, request, view, obj):
         if isinstance(request.user, User):
             return request.user.is_admin
+        return
 
 
 class IsAdminUserOrReadOnly(permissions.BasePermission):
