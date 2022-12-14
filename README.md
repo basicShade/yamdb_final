@@ -15,8 +15,8 @@ api_yamdb - учебный командный проект по созданию
 ### Запуск проекта ⚙️
 1. В терминале клонировать репозиторий и перейти в папку infra:
     ```
-    git clone git@github.com:basicShade/infra_sp2.git
-    cd infra_sp2/infra/
+    git clone git@github.com:basicShade/api_yamdb.git
+    cd api_yamdb/infra/
     ```
 2. В папке infra создать .env файл по шаблону 🔒
     ```
@@ -31,21 +31,24 @@ api_yamdb - учебный командный проект по созданию
 
 3. Запустить docker-compose:
     ```
-    docker-compose up --build -d
+    docker-compose -p api_yamdb up --build -d
     ```
 
 4. Выполнить миграции, загрузить статику и данные, создать суперпользователя:
     ```
-    docker-compose exec web python manage.py migrate --run-syncdb
-    docker-compose exec web python manage.py collectstatic --no-input
-    docker-compose exec web python manage.py load_data
-    docker-compose exec web python manage.py createsuperuser
+    docker-compose -p api_yamdb exec web python manage.py migrate --run-syncdb
+    docker-compose -p api_yamdb exec web python manage.py collectstatic --no-input
+    docker-compose -p api_yamdb exec web python manage.py load_data
+    docker-compose -p api_yamdb exec web python manage.py createsuperuser
     ```
 
 После запуска сервера будет доступна Redoc документация:
 ```
 http://127.0.0.1/redoc/
 ```
+
+### Планы по доработке
+В данный момент разрабатываю CI для api_yamdb с помощью GitHub Actions.
 
 ### Авторы
 ```
