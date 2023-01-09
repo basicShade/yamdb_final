@@ -1,6 +1,6 @@
 # api_yamdb    <img src="https://github.com/basicshade/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg" />
-* Главная страница: http://basicshade.ddns.net/api/v1/
-* Документация: http://basicshade.ddns.net/redoc/
+* ~~Главная страница: http://basicshade.ddns.net/api/v1/~~
+* ~~Документация: http://basicshade.ddns.net/redoc/~~
 
 
 ### Описание
